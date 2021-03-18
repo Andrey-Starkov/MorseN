@@ -5,9 +5,9 @@ using System.Text;
 
 namespace MorseN
 {
+ 
     class Morse
     {
-
         public static void Morz(string choose,string language)  //Метод, в котором происходит основная работа программы
         {
             string path_Output = @"C:\Users\andre\OneDrive\Рабочий стол\Morse\Output.txt";        // Путь к файлу, в котором будет хранится результат   
@@ -96,8 +96,6 @@ namespace MorseN
             languache = Console.ReadLine();
             Morz(choose,languache);
         }
-
     }
-
 }
 
