@@ -71,18 +71,22 @@ namespace Morse
                 string temp1, temp2 = "";
                 temp1 = Console.ReadLine();
                 temp1 += " ";
-                for (int i = 0; i < temp1.Length; i++)
+                try
                 {
-                    if (temp1[i] != ' ')
+                    for (int i = 0; i < temp1.Length; i++)
                     {
-                        temp2 += temp1[i];
-                    }
-                    else
-                    {
-                        result += languageMorse[temp2];
-                        temp2 = "";
+                        if (temp1[i] != ' ')
+                        {
+                            temp2 += temp1[i];
+                        }
+                        else
+                        {
+                            result += languageMorse[temp2];
+                            temp2 = "";
+                        }
                     }
                 }
+                catch { }
             }
             using (StreamWriter ff = new StreamWriter(path_Output, true)) //Вывод в файл
                 ff.WriteLine(result);
