@@ -16,7 +16,7 @@ namespace Mors
 
         public Dictionary<string,string> RUS(Dictionary<string,string> RUSL)
         {
-            string path_lang = @"F:\06.04\MorseN\bin\Debug\netcoreapp2.0\RUS.txt"; //Текстовый файл,в котором размещена библиотека языка
+            string path_lang = @"D:\06.04\MorseN\bin\Debug\netcoreapp2.0\RUS.txt"; //Текстовый файл,в котором размещена библиотека языка
             using (StreamReader f = new StreamReader(path_lang,true))  //Чтение экзампляра файла с помощью потоков
             {
                 string key = ""; //Значение для библиотеки
@@ -43,7 +43,7 @@ namespace Mors
 
         public static Dictionary<string, string> RUSLReverse(Dictionary<string, string> RUSL) //Все оставшиеся языки по аналогии с предыдущем
         {
-            string path_lang = @"F:\06.04\MorseN\bin\Debug\netcoreapp2.0\RUS.txt";
+            string path_lang = @"D:\06.04\MorseN\bin\Debug\netcoreapp2.0\RUS.txt";
             using (StreamReader f = new StreamReader(path_lang, true))  
             {
                 string key = ""; 
@@ -73,7 +73,7 @@ namespace Mors
 
         public static Dictionary<string, string> ENG(Dictionary<string, string> RUSL)
         {
-            string path_lang = @"F:\06.04\MorseN\bin\Debug\netcoreapp2.0\ENG.txt";
+            string path_lang = @"D:\06.04\MorseN\bin\Debug\netcoreapp2.0\ENG.txt";
             using (StreamReader f = new StreamReader(path_lang, true))  
             {
                 string key = ""; 
@@ -102,7 +102,7 @@ namespace Mors
 
         public static Dictionary<string, string> ENGLReverse(Dictionary<string, string> RUSL) 
         {
-            string path_lang = @"F:\06.04\MorseN\bin\Debug\netcoreapp2.0\ENG.txt";
+            string path_lang = @"D:\06.04\MorseN\bin\Debug\netcoreapp2.0\ENG.txt";
             using (StreamReader f = new StreamReader(path_lang, true))  
             {
                 string key = ""; 
@@ -154,8 +154,8 @@ namespace Mors
         public string Morz(string temp1)  //Перевод в азбуку Морза
         {
            // printSOVIETSLOVar();
-            string path_Output = @"F:\06.04\MorseN\bin\Debug\netcoreapp2.0\Output.txt";        // Путь к файлу, в котором будет хранится результат   
-            string f = @"F:\06.04\MorseN\bin\Debug\netcoreapp2.0\Input.txt"; //Путь к файлу из которого мы берём текст
+            //string path_Output = @"D:\06.04\MorseN\bin\Debug\netcoreapp2.0\Output.txt";        // Путь к файлу, в котором будет хранится результат   
+            //string f = @"D:\06.04\MorseN\bin\Debug\netcoreapp2.0\Input.txt"; //Путь к файлу из которого мы берём текст
             string result = "";
             // string temp1 = "";
           //  temp1.ToUpper();
@@ -190,11 +190,11 @@ namespace Mors
                 }
                 a = false;
             }
-            Console.WriteLine(result);
+        //    Console.WriteLine(result);
             return result;
         }
 
-        public string MorseReverse(string f, string path_Output, string temp1) //Перевод из азбуки Морза
+        public string MorseReverse(string temp1) //Перевод из азбуки Морза
         {
             string result = "";
             string temp2 = "";
